@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Artists</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngFor="let artist of artists">
+    <ion-item [routerLink]="['/artists', artist.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="artist.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{artist.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
